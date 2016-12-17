@@ -1,0 +1,150 @@
+@charset "utf-8";
+body{font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;}
+/*.font-content-style{font-family:"Microsoft Yahei",Helvetica,STHeiti,Droid Sans Fallback;}*/
+
+.font-icon{font-family:'Glyphicons Halflings' !important;}
+.width-full{width:100%;}
+
+.box-circle{
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+
+.box-around-shadow{
+    -webkit-box-shadow: 3px 3px 3px #ccc, 3px -3px 3px #ccc, -3px 3px 3px #ccc, -3px -3px 3px #ccc;
+    -moz-box-shadow: 3px 3px 3px #ccc, 3px -3px 3px #ccc, -3px 3px 3px #ccc, -3px -3px 3px #ccc;
+    box-shadow: 3px 3px 3px #ccc, 3px -3px 3px #ccc, -3px 3px 3px #ccc, -3px -3px 3px #ccc;
+}
+
+.custom-ul{padding:0;margin:0;list-style: none;}
+.custom-ul li{float:left;}
+
+.custom-ol{padding-left:0;list-style-position: inside;}
+.custom-ol li{dispay:block;}
+
+.custom-a,.custom-a:hover,.custom-a:focus{text-decoration: none;}
+
+.left{float:left !important;}
+.right{float:right !important;}
+
+.left-area{float:left;}
+.right-area{float:right;}
+
+
+.relative{position:relative;}
+.absolute{position:absolute;}
+.inline-block{display:inline-block;}
+.table-cell{display:table-cell;float:none;}
+.border-box{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.content-box{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+/*文字不换行，超出隐藏*/
+.line-overHidden{display:block;white-space: nowrap;overflow:hidden;text-overflow: ellipsis;}
+/*鼠标移入后显示所有文字  如果文字可能会与其他内容重叠  根据当前界面的背景色设置 class的背景色*/
+.line-overHidden:hover{display:inline-block;position:relative;z-index:5;background-color:#fff;}
+
+
+/*
+    带有日期的标题链接列表
+    日期格式一般是：2016-10-17，[2016-10-17]数字和符号占据的宽度一般是0.5em，因此可以设置padding-right:5em;或者padding-right;6em;等
+    方式来个日期位置进行定位
+*/
+.font-list-box{display:block;padding:.3em 7em .3em 0;position:relative;top:0;left:0;}
+.font-list-create-time{position:absolute;right:.5em;}
+
+
+/*
+    设定固定宽高比例的元素进行展示
+    padding，margin的百分比是根据宽度设置的
+    可以自定义宽高比例  只需要添加一个类即可
+*/
+/*4:3 width：height   4：3*/
+.ratio-box{position:relative;top:0;left:0;width:100%;height:0;margin:0;padding-top:0;padding-right:0;padding-left:0;}
+.ratio-show{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.ratio-w4h3{padding-bottom:75%;}
+.ratio-w20h9{padding-bottom:45%;}
+.ratio-wEqualH{padding-bottom:100%;}
+
+/*
+    一行两列 图文显示
+    适用于图片和文字所占据的根据两个元素所占据高度最高的元素决定
+    并且需要进行居中或底部对齐等
+*/
+.img-font-half-line{width:50%;display:table-cell;float:none;}
+.middle{vertical-align:middle;}
+.bottom{vertical-align: bottom;}
+
+/*
+    确保文字不会出现超出被截断的现象
+    5行显示
+    width 100%继承，控制高度就不会出现文字被截断的现象，
+    通过box-sizing padding-top padding-bottom line-height 以em字体字号为单位即可
+*/
+.font-content-box{width:100%;padding:.5em 16px;line-height:1.6;line-height:1.6\9;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height:8em;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height:9em;
+}
+
+/*
+    图片在移动端的展示形式
+    图片大小其实是固定的，尤其是类似于产品图片列表，图片的大小总是在一定的范围内变化（200px-300px），过大过小都会出现展示好看，不协调的问题
+    240px 210px 180px
+    以下是根据bootstrap width 768px以下的不同的屏幕尺寸设置的
+    针对img width:100%;来实现的
+*/
+@media screen and (min-width:640px) and (max-width:767px){
+    .col-custom-max768{width:33.33%;padding-left:15px;padding-right:15px;}
+}
+@media screen and (min-width:420px) and (max-width:639px){
+    .col-custom-max768{width:50%;box-sizing:border-box;padding-left:15px;padding-right:15px;}
+}
+@media screen and (min-width:320px) and (max-width:419px){
+    .col-custom-max768{width:100%;box-sizing:border-box;padding-left:8%;padding-right:8%;}
+}
+@media screen and (max-width:319px){
+    .col-custom-max768{width:100%;padding-left:0;padding-right:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
