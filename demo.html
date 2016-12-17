@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .container{width:1170px;margin:0 auto;position:relative;
+            overflow: hidden;}
+        .boxlist{width:20%;height:300px;position:absolute;top:0;left:0;font-size:50px;color:#fff;}
+        .red{background-color: red;}
+        .blue{background-color: blue;}
+        .black{background-color: black;}
+        .yellow{background-color: yellow;}
+
+        #nextId{
+            position: absolute;top:0;right:0;width:5%;background-color: black; opacity: .5;}
+        #prevId{position: absolute;top:0;left:0;width:5%;background-color: black; opacity: .5;}
+        .orange{background-color: orange;}
+    </style>
+</head>
+<body>
+<div id="container" class="container">
+    <div class="boxlist red">1</div>
+    <div class="boxlist blue">2</div>
+    <div class="boxlist black">3</div>
+    <div class="boxlist yellow">4</div>
+    <div id="prevId"></div>
+    <div id="nextId"></div>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript">
+    var demoCarousel = new carousel({
+        "boxId":"container",
+        "boxChildCLassName":"boxlist",
+        "lineShowSize":5,
+        "moveSize":1,
+        "autoMotion":true,
+        "prevId":"prevId",
+        "nextId":"nextId",
+        "zIndexMax":10,
+        "zIndexMin":5
+    });
+    demoCarousel.run();
+    //demoCarousel.onChangeParam({"lineShowSize":3});
+</script>
+</body>
+</html>
